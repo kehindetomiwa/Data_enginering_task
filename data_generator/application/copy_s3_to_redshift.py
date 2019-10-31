@@ -7,6 +7,11 @@ import sys
 from util.s3_utils import copy_file_to_s3
 
 
+
+
+
+
+
 def main():
     util_ini = 'util/config/database.ini'
     rs_param = config(filename=util_ini, section='redshift') 
@@ -41,7 +46,7 @@ def main():
     copy_command= '''
         copy {} from \
         's3://{}' 
-        credentials 'aws_iam_role={}' 
+        credentials` 'aws_iam_role={}' 
         delimiter '|' region {}; '''.format()
 
     try:

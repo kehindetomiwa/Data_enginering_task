@@ -9,8 +9,12 @@ Jinja2==2.10.3
 jmespath==0.9.4
 MarkupSafe==1.1.1
 numpy==1.17.2
+pandas==0.25.2
 psycopg2==2.8.3
+pyspark==2.4.4
 python-dateutil==2.8.0
+python-dotenv==0.10.3
+pytz==2019.3
 s3transfer==0.2.1
 six==1.12.0
 text-unidecode==1.3

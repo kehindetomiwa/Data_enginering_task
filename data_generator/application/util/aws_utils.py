@@ -1,6 +1,3 @@
-
-
-from urllib.parse import urlparse
 import boto3
 
 
@@ -10,7 +7,6 @@ def display_buckets():
         print(buckets.name)
 
 
-# def copy_file_to_s3(bucket_dest,file_name):
 def copy_file_to_s3(file_path, bucket, s3_dest):
     s3_client = boto3.client('s3')
     print('[copy_file_to_s3] local file add: ', file_path)
