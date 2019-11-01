@@ -4,3 +4,4 @@ web_app_debug.py
 venv/
 .idea/
 *.pyc
+application/copy_s3_to_redshift_stage.py
