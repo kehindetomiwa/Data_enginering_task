@@ -1,7 +1,7 @@
 .git
 .env
-web_app_debug.py
+*web_app_debug.py
 venv/
 .idea/
 *.pyc
-data_generator/application/copy_s3_to_redshift_stage.py
+*redshift.py
