@@ -1,16 +1,12 @@
 FROM python:latest
 
 WORKDIR /usr/share/app
+
 # Copy app files from local to container
-COPY application ./
-COPY web_app_debug.py ./
-
-#RUN pip install flask
-# Install app requirements via pip
+COPY requirements.txt ./
 RUN pip install -r requirements.txt
+COPY application ./
+CMD ["python","docker_debugger.py"]
 
-CMD ["./app.py"]
-#CMD ["python",""]
-#CMD ["top"]
-#CMD ["python","web_app_debug.py"]
+
 

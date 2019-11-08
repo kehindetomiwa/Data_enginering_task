@@ -1,7 +1,8 @@
 .git
 .env
-*web_app_debug.py
 venv/
 .idea/
 *.pyc
 *redshift.py
+*docker_debugger.py
+*test.py
