@@ -1,7 +1,8 @@
 .git
 .env
 venv/
-.idea/
+.idea/*
+.idea
 *.pyc
 *redshift.py
 *docker_debugger.py
