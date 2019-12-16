@@ -1,5 +1,6 @@
-
+venv
 README.md
 postgresdb
 docker-compose.yaml
+.idea
 

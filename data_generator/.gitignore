@@ -7,3 +7,4 @@ venv/
 *redshift.py
 *docker_debugger.py
 *test.py
+*.ipynb_checkpoints

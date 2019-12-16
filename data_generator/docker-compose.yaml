@@ -2,8 +2,10 @@ version: "3.7"
 services:
   postgres:
     image: postgres:latest
+    container_name: pg_container
+    restart: always
     volumes:
-      - ./postgresdb:/var/lib/postgresql:rw
+      - postgresdb:/var/lib/postgresql
     environment:
       - "POSTGRES_USER=postgres"
       - "POSTGRES_PASSWORD=postgres"
@@ -17,11 +19,22 @@ services:
     build:
       context: .
       dockerfile: "Dockerfile"
+    links:
+      - postgres
+    environment:
+      - PGPASSWORD=postgres
+      - PGUSER=postgres
+      - PGDATABASE=postgres
+      - PGHOST=database
+      - PGPORT=5432
+    volumes:
+      - $PWD/application/:/src/application
     ports:
-    #  - "3000:3000"
-      - "5001:5000"
+      - "8889:8888"
+
     depends_on:
       - postgres
-    #environment:
-    #  - "TERM=xterm"
     restart: on-failure
+
+volumes:
+  postgresdb: {}

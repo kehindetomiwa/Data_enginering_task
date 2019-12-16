@@ -18,6 +18,13 @@ db_name = os.getenv('db_name')
 db_password = os.getenv('db_password')
 
 
+#n_host = 'postgres'
+#db_port = '5432'
+#db_user = 'postgres'
+#db_name = 'postgres'
+#db_password = 'postgres'
+
+
 def get_date_updated(date):
     """
     :param date:
